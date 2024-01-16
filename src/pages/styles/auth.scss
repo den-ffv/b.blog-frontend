@@ -1,0 +1,73 @@
+@import "../../variables";
+.auth {
+  display: flex;
+  flex-direction: row;
+  &__conteiner {
+    margin: 0 auto;
+    height: 100%;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+  }
+  &__title {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 50px 0 15px 0;
+    font-family: $secondary_font_family;
+  }
+  &__text {
+    color: #666;
+    a {
+      color: #2d2d2d;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+  &__input {
+    width: 300px;
+    height: 45px;
+    font-size: 16px;
+    margin: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #222;
+    font-family: $secondary_font_family;
+    padding: 5px;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: #000;
+    }
+  }
+  &__button {
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+    font-family: $secondary_font_family;
+    font-weight: bold;
+    color: #fff;
+    transition: $animation_time;
+    background: rgb(0, 0, 0);
+    border: none;
+    margin: 10px 0;
+    &:hover {
+      transition: $animation_time;
+      background: rgb(21, 132, 200);
+    }
+  }
+}
+
+.auth-image {
+  width: 45%;
+  height: 100vh;
+  margin: -20px 0 0 0;
+}

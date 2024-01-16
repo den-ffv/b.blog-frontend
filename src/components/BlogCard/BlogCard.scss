@@ -1,0 +1,48 @@
+@import "../../variables";
+
+.blog-card {
+    cursor: pointer;
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #d9d9d9;
+
+  &__img-conteiner {
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__content {
+    padding: 4px 0px 4px 0px;
+    font-family: $secondary_font_family;
+  }
+  &__title {
+    color: #2c2c2c;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 8px 0;
+  }
+}
+.big-card {
+  &__tag {
+  }
+
+  &__title {
+  }
+
+  &__text {
+  }
+
+  &__footer {
+  }
+
+  &__read-time {
+  }
+
+  &__read-button {
+  }
+}

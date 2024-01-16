@@ -1,0 +1,76 @@
+@import "../../variables";
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  padding: 20px;
+  width: 100%;
+  height: 100svh;
+  transform: translateY(-110%);
+  transition: $animation_time;
+  &__ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  &__list {
+    text-align: center;
+    margin: 20px;
+    a {
+      padding: 10px;
+      text-decoration: none;
+      color: #1d242e;
+      font-size: 30px;
+      padding: 10px;
+    }
+    .active {
+      position: relative;
+      text-decoration: red wavy underline;
+    }
+  }
+  &__close{
+    cursor: pointer;
+    font-family: $secondary_font_family;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    p{
+        margin: 0px 10px 0px 0px;
+        font-size: 15px;
+    }
+  }
+  &__button {
+    display: none;
+  }
+}
+.menu-open {
+  transition: $animation_time;
+  transform: translateY(0%);
+}
+
+@media(max-width: 740px){
+    .menu{
+        &__button {
+            cursor: pointer;
+            background: transparent;
+            border: none;
+            display: inline-block;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 40px;
+            height: 20px;
+            margin: 10px;
+            span {
+              display: block;
+              width: 100%;
+              height: 3px;
+              background: #000;
+            }
+          }
+    }
+}
