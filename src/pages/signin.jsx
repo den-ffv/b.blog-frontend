@@ -11,7 +11,7 @@ function SignIn() {
       {/* <button onClick={goBack}>Go Back</button> */}
       <Link to={"/"}>
         <div className="logo">
-          <p className="logo__text">b.blog</p>
+          {/* <p className="logo__text">b.blog</p> */}
         </div>
       </Link>
         <h1 className="auth__title">Welcome back!</h1>

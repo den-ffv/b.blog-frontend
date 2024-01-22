@@ -1,22 +1,30 @@
 @import "../../variables";
 
 .menu {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  background: #fff;
-  padding: 20px;
   width: 100%;
-  height: 100svh;
   transform: translateY(-110%);
   transition: $animation_time;
+  border-radius: 20px;
+  padding: 10px;
+  z-index: 99;
+  background-blend-mode: overlay;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  color: #000;
+  -webkit-text-stroke-color: black;
+  background-color: rgba(255, 255, 255, .18);
+  box-shadow: 0 2px 13px rgba(0, 0, 0, .2);
   &__ul {
     display: flex;
     flex-direction: column;
     margin-top: 30px;
-  }
-  &__list {
     text-align: center;
+  }
+
+  &__list {
     margin: 20px;
     a {
       padding: 10px;
@@ -30,7 +38,7 @@
       text-decoration: red wavy underline;
     }
   }
-  &__close{
+  &__close {
     cursor: pointer;
     font-family: $secondary_font_family;
     font-weight: bold;
@@ -38,9 +46,9 @@
     align-items: center;
     background: transparent;
     border: none;
-    p{
-        margin: 0px 10px 0px 0px;
-        font-size: 15px;
+    p {
+      margin: 0px 10px 0px 0px;
+      font-size: 15px;
     }
   }
   &__button {
@@ -49,28 +57,28 @@
 }
 .menu-open {
   transition: $animation_time;
-  transform: translateY(0%);
+  transform: translateY(40%);
 }
 
-@media(max-width: 740px){
-    .menu{
-        &__button {
-            cursor: pointer;
-            background: transparent;
-            border: none;
-            display: inline-block;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 40px;
-            height: 20px;
-            margin: 10px;
-            span {
-              display: block;
-              width: 100%;
-              height: 3px;
-              background: #000;
-            }
-          }
+@media (max-width: 740px) {
+  .menu {
+    &__button {
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      display: inline-block;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 40px;
+      height: 20px;
+      margin: 10px;
+      span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: #000;
+      }
     }
+  }
 }

@@ -1,58 +1,42 @@
 @import "../../variables";
 
-// .skeleton-img {
-//   background-color: #e2e5e7;
-//   background-image: linear-gradient(
-//     90deg,
-//     rgba(#fff, 0),
-//     rgba(#fff, 0.5),
-//     rgba(#fff, 0)
-//   );
-//   background-size: 40px 100%;
-//   background-repeat: no-repeat;
-//   background-position: left -40px top 0;
-//   animation: shine 2s ease infinite;
-// }
-
-// @keyframes shine {
-//   to {
-//     background-position: right -40px top 0;
-//   }
-// }
-
 .big-card {
   cursor: pointer;
   display: flex;
-  padding: 8px;
-  border-radius: 5px;
-  border: 1px solid #d9d9d9;
+  flex-direction: column;
+
+  padding: 5px;
+  border: 1px solid rgba(151, 151, 151, 0.27);
+  border-radius: 5px ;
   margin: 5px 0;
+  max-width: 770px;
   &__img-conteiner {
     position: relative;
-    max-width: 500px;
     max-height: 235px;
+    overflow: hidden;
     img {
-      position: relative;
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
     }
   }
 
   &__content {
-    max-width: 500px;
-    padding: 4px 0px 4px 16px;
+    padding: 32px 0px 0px 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     font-family: $secondary_font_family;
   }
 
-  &__tag {
-    color: #4b4b4b;
-    font-size: 13px;
+  &__data {
+    color: #6941c6;
+    font-family: $secondary_font_family;
+    font-size: 14px;
     font-style: normal;
-    font-weight: bold;
-    line-height: normal;
+    font-weight: 600;
+    line-height: 20px;
     span {
       font-weight: 400;
     }
@@ -67,12 +51,14 @@
   }
 
   &__text {
-    color: #6e6e6e;
+    color: #667085;
 
-    font-size: 14px;
+    font-family: $secondary_font_family;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 21px; /* 150% */
+    line-height: 24px;
+    margin: 0px 0px 24px 0px;
   }
 
   &__footer {
@@ -80,12 +66,16 @@
     justify-content: space-between;
   }
 
-  &__read-time {
-    color: #6e6e6e;
-    font-size: 13px;
+  &__tag {
+    border-radius: 16px;
+    background: #f9f5ff;
+    color: #6941c6;
+    text-align: center;
+    font-size: 14px;
     font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 0px 10px;
   }
 
   &__read-button {

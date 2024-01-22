@@ -1,6 +1,11 @@
+@import "../../variables";
+
 .header {
-  padding: 30px 0px 20px 0px;
-  // border-bottom: 1px solid silver;
+  padding: 20px 0px 20px 0px;
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+  background: #fff;
   &__conteiner {
     display: flex;
     justify-content: space-between;
@@ -41,8 +46,8 @@
 .logo {
   cursor: help;
   display: inline-block;
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
   background: #1d242e;
   position: relative;
   &__text {
@@ -54,10 +59,40 @@
     color: #fff;
   }
 }
-@media(max-width: 740px){
-  .header{
-    &__list{
+
+.header-fixed {
+  max-width: 850px;
+  position: fixed;
+  width: 100%;
+  margin: 15px 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 20px;
+  padding: 10px 0;
+  z-index: 100;
+  background-blend-mode: overlay;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  color: #000;
+  -webkit-text-stroke-color: black;
+  background-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 2px 13px rgba(0, 0, 0, 0.2);
+  .logo {
+    width: 40px;
+    height: 40px;
+    &__text {
       display: none;
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .header {
+    &__ul {
+      li{
+
+        display: none;
+      }
     }
   }
 }

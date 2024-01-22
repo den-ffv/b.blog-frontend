@@ -5,6 +5,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 
 import image from "/image.png";
 import arrow from "/icon/arrow.svg";
+import arrowRead from "/icon/arrow-read.svg";
 import "./BigCard.scss";
 
 function BigCard() {
@@ -15,7 +16,6 @@ function BigCard() {
   well. To see how CSS affects the load time of a webpage we first have to
   know...`;
 
-
   return (
     <div className="big-card">
       <div className="big-card__img-conteiner">
@@ -23,19 +23,15 @@ function BigCard() {
       </div>
       <div className="big-card__content">
         <div>
-          <p className="big-card__tag">
-            Font-end • <span>1 Hour Ago</span>
-          </p>
-          <h1 className="big-card__title">
+          <p className="big-card__data">Sunday , 1 Jan 2023</p>
+          <h1 className="blog-card__title">
             Optimizing CSS for faster page loads
+            <img src={arrowRead} alt="arrow" />
           </h1>
-          <p className="big-card__text">{truncateText(textOrig, 300)}</p>
+          <p className="big-card__text">{truncateText(textOrig, 120)}</p>
         </div>
         <div className="big-card__footer">
-          <p className="big-card__read-time">3 Min Read</p>
-          <p className="big-card__read-button">
-            Read Full <img src={arrow} alt="" />
-          </p>
+          <p className="big-card__tag">CSS</p>
         </div>
       </div>
     </div>

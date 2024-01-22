@@ -19,9 +19,6 @@ function App() {
   const menuItems = [
     { id: 1, value: "Home", href: "/" },
     { id: 2, value: "Blog", href: "/blog" },
-    { id: 3, value: "About", href: "/about" },
-    { id: 4, value: "Contant", href: "/contact" },
-    // { id: 5, value: "SignIn", href: "/login" },
   ];
   const [menuOpen, setMenuOpen] = useState(false);
   const currentPath = window.location.pathname;
@@ -41,13 +38,8 @@ function App() {
       {/* <div style={{minHeight: 'calc(100vh - 0px)'}}> */}
 
       {renderHeader}
-      <Menu
-        menuItems={menuItems}
-        menuOpen={menuOpen}
-        setMenuOpen={setMenuOpen}
-      />
 
-      <main className="conteiner" style={{ paddingTop: 20 }}>
+      <main className="conteiner main">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
